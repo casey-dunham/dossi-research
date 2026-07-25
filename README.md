@@ -44,7 +44,7 @@ conditions. See [`DISCLAIMER.md`](DISCLAIMER.md).
 | Content | License |
 |---|---|
 | `reports/RESULTS.md`, `MANIFEST.md`, docs | AGPL-3.0 (see `LICENSE`), © the author |
-| `reports/*.tsv` aggregate data | released for reuse with attribution (CC BY 4.0) |
+| `reports/*.tsv` aggregate data | CC BY 4.0 — see `DATA-LICENSE.md` |
 | Simulation/benchmark code (when released) | AGPL-3.0 |
 | Figures / manuscript text | CC BY 4.0 |
 | External datasets (JAEB, HUPA-UCM) | governed by their own terms — see `ATTRIBUTION.md` |

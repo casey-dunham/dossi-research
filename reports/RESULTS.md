@@ -62,9 +62,10 @@ target population). Dossi+AB held worst-row TBR<54 at 0.0% across all 300 subjec
   adult arms tie near 69%), and **Dossi's correction aggressiveness was tuned on this
   same evaluation cohort while the comparators were run at pinned, untuned defaults.**
 - The clean-input plant cannot penalize aggression with hypoglycemia, and the plant
-  is author-built. The only interpretable finding is descriptive: adding Dossi's
-  correction layer coincided with zero observed adult severe-low, and every *examined*
-  loss slice was hyperglycemic rather than hypoglycemic.
+  is author-built. Descriptively, the Dossi arm recorded zero observed adult TBR<54,
+  and every *examined* loss slice was hyperglycemic rather than hypoglycemic. These
+  observations do not establish preserved safety, absence of performance cost, or
+  clinical acceptability.
 - A matched-tuning protocol on a held-out cohort with stochastic-input noise, and/or a
   re-run on the licensed UVA/Padova T1DMS, is required before any comparative TIR claim.
 
