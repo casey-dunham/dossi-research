@@ -1,0 +1,22 @@
+# Never commit secrets or credentials
+*.xcconfig
+Secrets*
+*.p8
+*.p12
+*.mobileprovision
+*.pem
+*.key
+.env
+.env.*
+
+# Never commit patient-derived / DUA-protected data
+SimulationFixtures/
+**/private/
+*decision-divergence-steps.tsv
+*per-step*.tsv
+*per-participant*.tsv
+
+# Build / OS cruft
+.DS_Store
+DerivedData/
+*.log
