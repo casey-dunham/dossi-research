@@ -21,8 +21,11 @@ replay-state and zero-basal invariant corrections.
 | Table 2 (overall, 8 arms) | `reports/study1-cohort-2026-07-25.tsv` (overall rows); presented in `reports/RESULTS.md` |
 | Study 2 JAEB headline | `reports/study2-headline-2026-07-25.tsv`; interpreted in `reports/RESULTS.md` |
 | Study 2 suspend-mismatch tail | `reports/study2-suspend-tail-2026-07-25.tsv`; interpreted in `reports/RESULTS.md` |
+| Tables 3A–B (JAEB settings-complete slice) | `reports/study2-jaeb-settings-slice-2026-07-25.tsv` |
+| JAEB row-cap sensitivity | `reports/study2-jaeb-row-cap-sensitivity-2026-07-25.tsv` |
+| HUPA-UCM manual-therapy contrast | `reports/study2-hupa-contrast-2026-07-25.tsv` |
 | Study 2 source revision and withheld-artifact hashes | `reports/study2-provenance-2026-07-25.md` |
-| Reported current Dossi+AB headline (adult 82.875%, overall 81.319%) | `reports/study1-cohort-2026-07-25.tsv` |
+| Dossi+AB headline (adult 82.875%, overall 81.319%) | `reports/study1-cohort-2026-07-25.tsv` |
 
 The aggregate TSVs are licensed separately under CC BY 4.0; see `DATA-LICENSE.md`.
 

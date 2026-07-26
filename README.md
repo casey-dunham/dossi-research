@@ -5,8 +5,8 @@ delivery (AID) controller intended for future release under AGPL-3.0. The
 deployable application and evaluation code are not released in this repository.
 This repository accompanies the preprint:
 
-> *Engineering Characterization of a Reduced-Input Automated Insulin Delivery
-> Controller: In-Silico Cohort Evaluation and Retrospective Decision Replay.*
+> *Engineering Characterization of an Automated Insulin Delivery Controller:
+> In-Silico Cohort Evaluation and Retrospective Decision Replay.*
 > Casey Dunham, Georgia Institute of Technology. (medRxiv, in preparation.)
 
 ## ⚠️ Research artifacts, not clinical guidance
@@ -21,13 +21,20 @@ conditions. See [`DISCLAIMER.md`](DISCLAIMER.md).
 
 - [`reports/RESULTS.md`](reports/RESULTS.md) — the publication-facing results cited
   in the paper (Study 1 cohort tables and Study 2 decision-divergence),
-  with the load-bearing caveats (comparator tuning asymmetry, author-built plant).
+  with the applicable methodological boundaries (comparator tuning asymmetry,
+  author-built plant).
 - [`reports/study1-cohort-2026-07-25.tsv`](reports/study1-cohort-2026-07-25.tsv)
   — the per-arm aggregate data behind Study 1 Tables 1–2.
 - [`reports/study2-headline-2026-07-25.tsv`](reports/study2-headline-2026-07-25.tsv)
   — participant-level aggregate headline metrics and bootstrap intervals.
 - [`reports/study2-suspend-tail-2026-07-25.tsv`](reports/study2-suspend-tail-2026-07-25.tsv)
-  — aggregate characterization of the unresolved suspend-mismatch tail.
+  — aggregate characterization of the residual prediction/suspension disagreements.
+- [`reports/study2-jaeb-settings-slice-2026-07-25.tsv`](reports/study2-jaeb-settings-slice-2026-07-25.tsv)
+  — aggregate rows behind manuscript Tables 3A–B.
+- [`reports/study2-jaeb-row-cap-sensitivity-2026-07-25.tsv`](reports/study2-jaeb-row-cap-sensitivity-2026-07-25.tsv)
+  — capped-versus-uncapped sensitivity for the settings-complete JAEB slice.
+- [`reports/study2-hupa-contrast-2026-07-25.tsv`](reports/study2-hupa-contrast-2026-07-25.tsv)
+  — aggregate HUPA-UCM manual-therapy contrast.
 - [`reports/study2-provenance-2026-07-25.md`](reports/study2-provenance-2026-07-25.md)
   — frozen source revision, row counts, and hashes of withheld source artifacts.
 - [`MANIFEST.md`](MANIFEST.md) — maps each paper table to its source artifact.

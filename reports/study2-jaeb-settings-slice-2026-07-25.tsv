@@ -1,0 +1,6 @@
+scope	steps	total_delta_median_u	total_delta_iqr_u	basal_delta_median_uhr	basal_delta_iqr_uhr	correction_delta_median_u	correction_delta_iqr_u	pct_dossi_more	pct_dossi_less	pct_equal	pre_low70_steps	pre_low70_dossi_less_pct	pre_low54_steps	pre_low54_dossi_less_pct	high180_steps	high180_dossi_more_pct	high250_steps	high250_dossi_more_pct	falling_toward_low_steps	falling_dossi_zero_basal_pct	falling_source_zero_basal_pct	falling_both_zero_basal_pct
+ALL	7118	0.0417	0.1500	0.0000	0.9500	0.0000	0.1165	46.8530	15.4397	37.7072	555	12.0721	96	6.2500	949	68.0717	197	74.6193	278	73.0216	77.3381	61.8705
+ALL_overnight	2312	0.0583	0.2583	0.0000	1.0990	0.0000	0.2000	56.3581	13.1055	30.5363	78	28.2051	8	12.5000	344	65.9884	115	66.0870	37	59.4595	62.1622	27.0270
+ALL_day	4806	0.0077	0.1333	0.0000	0.8588	0.0000	0.0000	42.2805	16.5626	41.1569	477	9.4340	88	5.6818	605	69.2562	82	86.5854	241	75.1037	79.6680	67.2199
+ALL_post_meal	2426	0.0000	0.1202	0.0000	1.1356	0.0000	0.0000	32.7288	22.1352	45.1360	212	10.8491	42	14.2857	401	55.6110	84	60.7143	110	98.1818	80.9091	80.9091
+ALL_fasting	4692	0.0542	0.2126	0.0000	0.8738	0.0000	0.2000	54.1560	11.9778	33.8662	343	12.8280	54	0.0000	548	77.1898	113	84.9558	168	56.5476	75.0000	49.4048

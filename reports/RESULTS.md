@@ -59,8 +59,9 @@ independent licensed simulator.
 ## Study 2 — retrospective decision-divergence (JAEB-Loop, HUPA-UCM)
 
 The authoritative Study 2 source is the frozen replay identified in
-`study2-provenance-2026-07-25.md`. The adjacent headline and suspend-tail TSVs are
-the machine-readable aggregate sources.
+`study2-provenance-2026-07-25.md`. The adjacent headline, suspend-tail,
+settings-slice, row-cap-sensitivity, and HUPA TSVs are the machine-readable
+aggregate sources.
 
 A point-in-time recommendation comparison: at each observed timestep, Dossi's headless
 decision-stack recommendation is compared to the therapy actually delivered. This

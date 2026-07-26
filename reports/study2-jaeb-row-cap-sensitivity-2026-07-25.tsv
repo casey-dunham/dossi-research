@@ -1,0 +1,17 @@
+scope	metric	capped_value	uncapped_value	delta_uncapped_minus_capped
+ALL	steps	7118	8157	1039.0000
+ALL	total_delta_median_u	0.0417	0.0087	-0.0330
+ALL	pct_dossi_more	46.8530	40.9832	-5.8698
+ALL	pct_dossi_less	15.4397	23.1580	7.7183
+ALL	pct_equal	37.7072	35.8588	-1.8484
+ALL	pre_low70_steps	555	470	-85.0000
+ALL	pre_low70_dossi_less_pct	12.0721	30.0000	17.9279
+ALL	pre_low54_steps	96	110	14.0000
+ALL	pre_low54_dossi_less_pct	6.2500	20.9091	14.6591
+ALL	high180_steps	949	1655	706.0000
+ALL	high180_dossi_more_pct	68.0717	60.0604	-8.0113
+ALL	high250_steps	197	225	28.0000
+ALL	high250_dossi_more_pct	74.6193	54.2222	-20.3971
+ALL	falling_toward_low_steps	278	245	-33.0000
+ALL	falling_dossi_zero_basal_pct	73.0216	73.8776	0.8560
+ALL	falling_source_zero_basal_pct	77.3381	53.0612	-24.2769
