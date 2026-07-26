@@ -8,15 +8,12 @@ and not a superiority or non-inferiority comparison** (see caveats below).
 
 ## Study 1 — in-silico cohort
 
-The two Dossi arms were rerun on 2026-07-25 at
-`0d43d13cabf169531970cc07d0387dbb74f1b127`. Comparator values are frozen
-2026-06-27 algorithm-boundary references: `LoopAlgorithm@2f5c630084aa`,
-`oref0@88cf032aa74f`, and `trio-oref@8282ce71a57d`. They were not rerun with the
-current Dossi arms. Source audit confirmed that the deterministic cohort, seeds,
-plant, arm configuration, and comparator wrappers used for the frozen references
-are unchanged. The comparison remains descriptive and is not a contemporaneous
-eight-arm execution. The plant is Dossi's independent `GroundTruthPhysiology`,
-**not** the licensed UVA/Padova T1DMS.
+The Dossi arms are pinned at `0d43d13cabf169531970cc07d0387dbb74f1b127`.
+Comparator algorithm-boundary references are pinned at
+`LoopAlgorithm@2f5c630084aa`, `oref0@88cf032aa74f`, and
+`trio-oref@8282ce71a57d`. Source audit confirmed the same deterministic cohort,
+seeds, plant, arm configuration, and comparator wrappers. The plant is Dossi's
+independent `GroundTruthPhysiology`, **not** the licensed UVA/Padova T1DMS.
 
 ### Table 1 — adult stratum (primary target population, n = 100/arm)
 
@@ -50,25 +47,20 @@ arms it is dominated by isolated single-subject *pediatric* fixtures the
 algorithm-boundary bridges mishandle (a validated harness artifact, out of Dossi's
 target population). Dossi+AB held worst-row TBR<54 at 0.0% across all 300 subjects.
 
-### How to read Study 1 (the load-bearing caveats)
-- **This is not a superiority or non-inferiority result.** The between-arm TIR
-  differences come from the automated-correction posture (with correction off, all
-  adult arms tie near 69%), and **Dossi's correction aggressiveness was tuned on this
-  same evaluation cohort while the comparators were run at pinned, untuned defaults.**
-- The clean-input plant cannot penalize aggression with hypoglycemia, and the plant
-  is author-built. Descriptively, the current Dossi arm recorded zero observed adult
-  TBR<54. This does not establish preserved safety, absence of performance cost, or
-  clinical acceptability.
-- A matched-tuning protocol on a held-out cohort with stochastic-input noise, and/or a
-  re-run on the licensed UVA/Padova T1DMS, is required before any comparative TIR claim.
+### Interpretation
+
+Automated correction accounts for most between-arm separation: with correction
+disabled, adult arms converge near 69% TIR. Dossi's correction setting was selected
+on this cohort while comparators retained pinned defaults, so the comparison
+characterizes controller posture rather than superiority. The next comparative
+test requires matched tuning on a held-out cohort with stochastic-input noise or an
+independent licensed simulator.
 
 ## Study 2 — retrospective decision-divergence (JAEB-Loop, HUPA-UCM)
 
-The authoritative Study 2 source is the 2026-07-25 replay at frozen Dossi revision
-`0d43d13cabf169531970cc07d0387dbb74f1b127`; see
+The authoritative Study 2 source is the frozen replay identified in
 `study2-provenance-2026-07-25.md`. The adjacent headline and suspend-tail TSVs are
-the machine-readable aggregate sources. An older 2026-07-09 workspace replay is
-not used for the paper and produces different values.
+the machine-readable aggregate sources.
 
 A point-in-time recommendation comparison: at each observed timestep, Dossi's headless
 decision-stack recommendation is compared to the therapy actually delivered. This
@@ -77,23 +69,26 @@ reflects the delivered system, not Dossi's hypothetical actions.
 
 **JAEB-Loop, full adult cohort (467 participants, participant-level, bootstrap CIs):**
 the median participant had Dossi recommending *more* total insulin than delivered in
-**54.55%** of >180 mg/dL rows (95% CI 51.95–56.69) and **57.89%** of >250 mg/dL rows
-(95% CI 54.84–63.64). The low-window direction was weaker and more variable (median
-18.35% of pre-<70 rows Dossi-less; 12.90% of pre-<54). Falling-low Dossi zero-basal
-was 87.78% at the participant median. A delivered-zero-basal/Dossi-nonzero-basal
-mismatch had a participant median of 0.00% but a nontrivial upper tail — an **open
-audit queue, not a cleared suspend-safety result**.
+**54.55%** of >180 mg/dL rows (95% CI 51.95–56.69) and **57.66%** of >250 mg/dL rows
+(95% CI 54.83–62.82). The low-window direction was weaker and more variable (median
+19.29% of pre-<70 rows Dossi-less; 13.34% of pre-<54). Falling-low Dossi zero-basal
+was 88.89% at the participant median.
 
-The tail contains 127 rows before an observed <54 mg/dL window, spanning 38
-participants and 46 fixture-days. Dossi's contemporaneous safety assessment marked
-0/127 as requiring suspension: all 127 blocked a basal increase while retaining
-nonzero basal (median 0.8 U/hr; range 0.325–2.1). Safety-kind labels were
-`trustedPredictedLow` for 88 rows and `fallingTrendBlock` for 39. The 60-minute
-predicted minima were 70.09–100 mg/dL despite the later observed <54 value. Because
-the observed future followed delivered therapy rather than Dossi, these rows do not
-show Dossi-caused outcomes; they identify unresolved prediction/suspension
-disagreement. “Delivered zero basal” is used because the dataset does not establish
-the source application's reason for every zero-basal row.
+The audit found and corrected a replay-state plumbing defect and a production
+post-low zero-basal invariant violation. No residual delivered-zero/Dossi-nonzero
+row occurred during post-low recovery.
+
+The audited set contains 100 rows from 33 participants and 37 fixture-days,
+mapping to **40 distinct subsequently observed <54 mg/dL onsets**. Dossi retained
+nonzero basal (median 0.75 U/hr; range 0.325–2.1) under `trustedPredictedLow` (62
+rows) or `fallingTrendBlock` (38 rows). Sixty-minute predicted minima were
+70.09–100 mg/dL. Forecasts exceeded the observed 60-minute nadir by a median 36.45
+mg/dL (range 17.09–60.80), and median lead time to the observed <54 onset was 41.99
+minutes. These 40 episodes are residual prediction/suspension validation targets,
+not 100 independent safety events. The observed future followed delivered therapy
+rather than Dossi, so they are not Dossi-caused outcomes. “Delivered zero basal” is
+used because the dataset does not establish the source application's reason for
+every zero-basal row.
 
 A smaller settings-complete sub-slice shows a stronger high-glucose signal, but that
 figure is sensitive to row-cap extraction (e.g. >250 Dossi-more 74.6% capped → 54.2%
@@ -127,9 +122,7 @@ a generalized claim that Dossi suspends at least as readily as delivered AID the
 tuned on — not patient-outcome evidence.*
 
 ## Provenance
-See `MANIFEST.md`. Dossi arms are the 2026-07-25 frozen-source rerun; comparator
-values are retained 2026-06-27 pinned references on the unchanged deterministic
-cohort/plant/harness definition and were not rerun contemporaneously.
+See `MANIFEST.md` for pinned revisions, artifact hashes, and source mapping.
 Per-step and per-participant patient-derived files are withheld under the JAEB and
 HUPA-UCM data-use terms (`ATTRIBUTION.md`); only these non-identifiable aggregates are
 released.

@@ -11,6 +11,10 @@ configuration, or comparator wrappers used by these references. The plant is
 Dossi's independent `GroundTruthPhysiology` implementation, not the licensed
 UVA/Padova T1DMS.
 
+Study 2 uses Dossi evaluation revision
+`f68531d9e3933c5eb7d085a24cd29be31cb545fc`, including the audited post-low
+replay-state and zero-basal invariant corrections.
+
 | Paper element | Source in this repo |
 |---|---|
 | Table 1 (adult, 8 arms) | `reports/study1-cohort-2026-07-25.tsv` (adult rows); presented in `reports/RESULTS.md` |
