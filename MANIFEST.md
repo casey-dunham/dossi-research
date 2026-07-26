@@ -1,23 +1,28 @@
 # Provenance manifest — paper table → source artifact
 
-All Study-1 arms come from a single coherent 2026-06-27 run (four controllers ×
-automated-correction on/off = eight arms), executed against the same plant and the
-same virtual subjects. Comparators are pinned algorithm boundaries
-(`LoopAlgorithm@2f5c630`, `trio-oref@8282ce71`), not full applications. The plant is
+The two Dossi Study-1 arms were rerun on 2026-07-25 at frozen revision
+`0d43d13cabf169531970cc07d0387dbb74f1b127`. Comparator values are retained from
+the 2026-06-27 evaluation and were not rerun contemporaneously. They are pinned
+algorithm boundaries: `LoopAlgorithm@2f5c630084aa0d72b8d14999e1e0f7c836b0c341`,
+`oref0@88cf032aa74ff25f69464a7d9cd601ee3940c0b3`, and
+`trio-oref@8282ce71a57d09a160e92ecd2baf28a70c89694d`, not full applications. A
+source audit found no changes to the deterministic cohort, seeds, plant, arm
+configuration, or comparator wrappers used by these references. The plant is
 Dossi's independent `GroundTruthPhysiology` implementation, not the licensed
 UVA/Padova T1DMS.
 
 | Paper element | Source in this repo |
 |---|---|
-| Table 1 (adult, 8 arms) | `reports/study1-cohort-2026-06-27.tsv` (adult rows); presented in `reports/RESULTS.md` |
-| Table 2 (overall, 8 arms) | `reports/study1-cohort-2026-06-27.tsv` (overall rows); presented in `reports/RESULTS.md` |
-| Table 3 (Dossi+AB loss slices) | `reports/RESULTS.md` (loss-slice decomposition of the same 6/27 Dossi+AB arm) |
-| Study 2 (JAEB full cohort + sub-slice) | `reports/RESULTS.md` |
-| Reported Dossi+AB headline (adult 83.583%, overall 82.583%) | `reports/study1-cohort-2026-06-27.tsv` |
+| Table 1 (adult, 8 arms) | `reports/study1-cohort-2026-07-25.tsv` (adult rows); presented in `reports/RESULTS.md` |
+| Table 2 (overall, 8 arms) | `reports/study1-cohort-2026-07-25.tsv` (overall rows); presented in `reports/RESULTS.md` |
+| Study 2 JAEB headline | `reports/study2-headline-2026-07-25.tsv`; interpreted in `reports/RESULTS.md` |
+| Study 2 suspend-mismatch tail | `reports/study2-suspend-tail-2026-07-25.tsv`; interpreted in `reports/RESULTS.md` |
+| Study 2 source revision and withheld-artifact hashes | `reports/study2-provenance-2026-07-25.md` |
+| Reported current Dossi+AB headline (adult 82.875%, overall 81.319%) | `reports/study1-cohort-2026-07-25.tsv` |
 
-The aggregate TSV is licensed separately under CC BY 4.0; see `DATA-LICENSE.md`.
+The aggregate TSVs are licensed separately under CC BY 4.0; see `DATA-LICENSE.md`.
 
-**Not a source for any reported value:** a later-commit (`dbd0e4f85`, 2026-07-22)
-Dossi-arm re-run gave adult TIR 84.0% (within ~0.5 pp of the reported 6/27 value);
-the paper reports the coherent 6/27 values throughout. Raw internal analysis logs
-are withheld (see README); `RESULTS.md` is the clean publication-facing summary.
+Raw internal analysis logs are withheld (see README); `RESULTS.md` is the clean
+publication-facing interpretation. Non-identifiable Study 2 aggregates and hashes
+of the withheld source artifacts are provided so the frozen run can be identified
+without releasing participant- or timestep-level data.

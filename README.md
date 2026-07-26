@@ -1,12 +1,13 @@
 # dossi-research
 
-Open research artifacts for **Dossi**, an open-source, iPhone-native automated
-insulin delivery (AID) system. This repository accompanies the preprint:
+Aggregate research artifacts for **Dossi**, an iPhone-native automated insulin
+delivery (AID) controller intended for future release under AGPL-3.0. The
+deployable application and evaluation code are not released in this repository.
+This repository accompanies the preprint:
 
-> *Designing Automated Insulin Delivery Around Cognitive Burden: An Operating
-> Philosophy, an In-Silico Cohort Evaluation, and a Retrospective Decision-Level
-> Characterization of a Reduced-Input Controller.* Casey Dunham, Georgia Institute
-> of Technology. (medRxiv, in preparation.)
+> *Engineering Characterization of a Reduced-Input Automated Insulin Delivery
+> Controller: In-Silico Cohort Evaluation and Retrospective Decision Replay.*
+> Casey Dunham, Georgia Institute of Technology. (medRxiv, in preparation.)
 
 ## ⚠️ Research artifacts, not clinical guidance
 
@@ -19,10 +20,16 @@ conditions. See [`DISCLAIMER.md`](DISCLAIMER.md).
 ## What's here
 
 - [`reports/RESULTS.md`](reports/RESULTS.md) — the publication-facing results cited
-  in the paper (Study 1 cohort tables, loss slices, Study 2 decision-divergence),
+  in the paper (Study 1 cohort tables and Study 2 decision-divergence),
   with the load-bearing caveats (comparator tuning asymmetry, author-built plant).
-- [`reports/study1-cohort-2026-06-27.tsv`](reports/study1-cohort-2026-06-27.tsv)
+- [`reports/study1-cohort-2026-07-25.tsv`](reports/study1-cohort-2026-07-25.tsv)
   — the per-arm aggregate data behind Study 1 Tables 1–2.
+- [`reports/study2-headline-2026-07-25.tsv`](reports/study2-headline-2026-07-25.tsv)
+  — participant-level aggregate headline metrics and bootstrap intervals.
+- [`reports/study2-suspend-tail-2026-07-25.tsv`](reports/study2-suspend-tail-2026-07-25.tsv)
+  — aggregate characterization of the unresolved suspend-mismatch tail.
+- [`reports/study2-provenance-2026-07-25.md`](reports/study2-provenance-2026-07-25.md)
+  — frozen source revision, row counts, and hashes of withheld source artifacts.
 - [`MANIFEST.md`](MANIFEST.md) — maps each paper table to its source artifact.
 - [`ATTRIBUTION.md`](ATTRIBUTION.md) — dataset sources, attribution, and use terms.
 

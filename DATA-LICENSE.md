@@ -1,6 +1,6 @@
 # Aggregate data license
 
-The aggregate data file `reports/study1-cohort-2026-06-27.tsv` is licensed
+The aggregate data file `reports/study1-cohort-2026-07-25.tsv` is licensed
 under the Creative Commons Attribution 4.0 International license (CC BY 4.0):
 https://creativecommons.org/licenses/by/4.0/
 

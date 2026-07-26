@@ -1,0 +1,6 @@
+scope	metric	participants_with_denominator	participant_median_pct	bootstrap_median_ci_low_pct	bootstrap_median_ci_high_pct
+ALL	pre_low70_dossi_less_pct	368	18.3462	16.2476	21.4728
+ALL	pre_low54_dossi_less_pct	196	12.9032	9.2617	20.0064
+ALL	high180_dossi_more_pct	420	54.5455	51.9488	56.6856
+ALL	high250_dossi_more_pct	253	57.8947	54.8387	63.6364
+ALL	falling_dossi_zero_basal_pct	367	87.7778	83.3333	91.6667
