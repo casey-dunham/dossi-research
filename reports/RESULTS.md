@@ -85,11 +85,11 @@ nonzero basal (median 0.75 U/hr; range 0.325–2.1) under `trustedPredictedLow` 
 rows) or `fallingTrendBlock` (38 rows). Sixty-minute predicted minima were
 70.09–100 mg/dL. Forecasts exceeded the observed 60-minute nadir by a median 36.45
 mg/dL (range 17.09–60.80), and median lead time to the observed <54 onset was 41.99
-minutes. These 40 episodes are residual prediction/suspension validation targets,
-not 100 independent safety events. The observed future followed delivered therapy
-rather than Dossi, so they are not Dossi-caused outcomes. “Delivered zero basal” is
-used because the dataset does not establish the source application's reason for
-every zero-basal row.
+minutes. These 40 episodes are retrospective source-versus-Dossi decision
+differences, not 100 independent events or Dossi-attributable outcomes. The
+observed future followed delivered therapy rather than Dossi. “Delivered zero
+basal” is used because the dataset does not establish the source application's
+reason for every zero-basal row.
 
 A smaller settings-complete sub-slice shows a stronger high-glucose signal, but that
 figure is sensitive to row-cap extraction (e.g. >250 Dossi-more 74.6% capped → 54.2%
